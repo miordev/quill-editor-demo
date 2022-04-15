@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { QuillModule } from 'ngx-quill';
-import { EmojiInputEditorComponent } from './emoji-input-editor/emoji-input-editor.component';
+import { EmojiInputEditorComponent } from './components/emoji-input-editor/emoji-input-editor.component';
 
 @NgModule({
   declarations: [
