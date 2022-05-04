@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { InputEditorModule } from './input-editor/input-editor.module';
+import { OutputEditorModule } from './output-editor/output-editor.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { InputEditorModule } from './input-editor/input-editor.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    InputEditorModule
+    InputEditorModule,
+    OutputEditorModule
   ],
   providers: [],
   bootstrap: [
