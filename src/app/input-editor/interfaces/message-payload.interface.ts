@@ -1,7 +1,7 @@
-import { Delta } from "quill";
+import { DeltaOperation } from "quill";
 
 export interface MessagePayload {
-  content: Delta;
+  content: DeltaOperation;
   html: string | null;
   text: string;
 }

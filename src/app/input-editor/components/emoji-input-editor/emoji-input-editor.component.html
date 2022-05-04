@@ -1,15 +1,5 @@
 <quill-editor (onContentChanged)="handleContentChanged($event)"></quill-editor>
 
-<!-- <pre>
-  <p>TEXT: {{ currentMessage?.text }}</p>
-</pre>
-
-<pre>
-  <code>HTML: {{ currentMessage?.html }}</code>
-</pre>
-
-<pre>
-  <code>OBJECT: {{ currentMessage?.content | json }}</code>
-</pre> -->
-
 <pre><code [highlight]="currentMessage?.html ?? ''"></code></pre>
+<pre><code [highlight]="currentMessage?.content | json"></code></pre>
+<pre><code [highlight]="currentMessage?.text ?? ''"></code></pre>
