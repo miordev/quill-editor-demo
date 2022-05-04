@@ -10,7 +10,8 @@ import { MessagePayload } from '../../interfaces/message-payload.interface';
 })
 export class EmojiInputEditorComponent {
 
-  private currentMessage?: MessagePayload
+  public currentMessage?: MessagePayload
+
 
   public handleContentChanged(lastQuillMessage: ContentChange) {
     this.currentMessage = {
