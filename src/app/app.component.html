@@ -1,3 +1,10 @@
-<app-emoji-input-editor></app-emoji-input-editor>
+<app-emoji-input-editor
+  (onMessage)="updateMessage($event)"
+></app-emoji-input-editor>
 
-<app-code-viewer sourceCode="console.log('hello world')"></app-code-viewer>
+<!-- TODO: Add text property without code-viewer -->
+<app-code-viewer [sourceCode]="currentMessage?.text ?? ''"></app-code-viewer>
+<app-code-viewer [sourceCode]="currentMessage?.html ?? ''"></app-code-viewer>
+<app-code-viewer
+  [sourceCode]="currentMessage?.content | json"
+></app-code-viewer>
