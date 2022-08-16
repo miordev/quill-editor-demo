@@ -4,11 +4,11 @@ import { ContentChange } from 'ngx-quill';
 import { MessagePayload } from '../../interfaces/message-payload.interface';
 
 @Component({
-  selector: 'app-emoji-input-editor',
-  templateUrl: './emoji-input-editor.component.html',
-  styleUrls: ['./emoji-input-editor.component.css']
+  selector: 'app-input-editor',
+  templateUrl: './input-editor.component.html',
+  styleUrls: ['./input-editor.component.css']
 })
-export class EmojiInputEditorComponent {
+export class InputEditorComponent {
   public currentMessage?: MessagePayload
 
   @Output() onMessage = new EventEmitter<MessagePayload>();

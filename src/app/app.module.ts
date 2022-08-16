@@ -1,23 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { QuillModule } from 'ngx-quill';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { InputEditorModule } from './input-editor/input-editor.module';
-import { OutputEditorModule } from './output-editor/output-editor.module';
+import { InputEditorComponent } from './components/input-editor/input-editor.component';
+import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    InputEditorComponent,
+    CodeViewerComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    InputEditorModule,
-    OutputEditorModule
+    BrowserModule,
+    HighlightModule,
+    QuillModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
+  ],
   bootstrap: [
     AppComponent
   ]

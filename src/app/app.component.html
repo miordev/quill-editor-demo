@@ -1,6 +1,4 @@
-<app-emoji-input-editor
-  (onMessage)="updateMessage($event)"
-></app-emoji-input-editor>
+<app-input-editor (onMessage)="updateMessage($event)"></app-input-editor>
 
 <!-- TODO: Add text property without code-viewer -->
 <app-code-viewer [sourceCode]="currentMessage?.text ?? ''"></app-code-viewer>

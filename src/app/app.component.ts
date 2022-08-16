@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessagePayload } from './input-editor/interfaces/message-payload.interface';
+import { MessagePayload } from './interfaces/message-payload.interface';
 
 @Component({
   selector: 'app-root',
