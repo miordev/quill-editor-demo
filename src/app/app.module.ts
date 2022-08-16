@@ -7,14 +7,16 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { InputEditorComponent } from './components/input-editor/input-editor.component';
 import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
+import { InputEditorComponent } from './components/input-editor/input-editor.component';
+import { QuillAppComponent } from './components/quill-app/quill-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputEditorComponent,
     CodeViewerComponent,
+    InputEditorComponent,
+    QuillAppComponent,
   ],
   imports: [
     AppRoutingModule,
