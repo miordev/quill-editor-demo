@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./message-viewer.component.css']
 })
 export class MessageViewerComponent {
-  @Input() public message: string = ''
-  @Input() public format: 'text' | 'code' = 'text'
+  @Input() public message?: string = ''
 }

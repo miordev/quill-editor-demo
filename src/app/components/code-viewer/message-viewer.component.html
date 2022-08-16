@@ -1,7 +1,1 @@
-<div *ngIf="format === 'text'">
-  {{ message }}
-</div>
-
-<div *ngIf="format === 'code'">
-  <pre><code [highlight]="message"></code></pre>
-</div>
+<pre><code [highlight]="message ?? ''"></code></pre>

@@ -16,7 +16,7 @@ export class InputEditorComponent {
   public updateMessage(lastQuillMessage: ContentChange) {
     this.currentMessage = {
       content: lastQuillMessage.content,
-      html: lastQuillMessage.html,
+      html: lastQuillMessage.html ?? '',
       text: lastQuillMessage.text,
     }
     this.onMessage.emit(this.currentMessage)

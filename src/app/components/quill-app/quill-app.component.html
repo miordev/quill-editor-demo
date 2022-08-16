@@ -1,15 +1,9 @@
 <app-input-editor (onMessage)="updateMessage($event)"></app-input-editor>
 
-<!-- TODO: Add text property without code-viewer -->
-<app-message-viewer
-  [message]="currentMessage?.text ?? ''"
-  format="text"
-></app-message-viewer>
-<app-message-viewer
-  [message]="currentMessage?.html ?? ''"
-  format="text"
-></app-message-viewer>
+<app-message-viewer [message]="currentMessage?.text"></app-message-viewer>
+
+<app-message-viewer [message]="currentMessage?.html"></app-message-viewer>
+
 <app-message-viewer
   [message]="currentMessage?.content | json"
-  format="code"
 ></app-message-viewer>
